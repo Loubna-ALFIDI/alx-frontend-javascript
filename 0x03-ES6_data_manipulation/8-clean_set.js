@@ -3,9 +3,10 @@ function cleanSet(set, startString) {
     throw new Error('Invalid input. Expected a Set and a string.');
   }
 
-  const filteredValues = [...set].filter((value) => value.startsWith(startString));
-  const restStrings = filteredValues.map((value) => value.substring(startString.length));
-  return restStrings.join(' - ');
+  return Array.from(set)
+    .filter((value) => value && value.startsWith(startString))
+    .map((value) => value.replace(startString, ''))
+    .join('-');
 }
 
 export default cleanSet;
