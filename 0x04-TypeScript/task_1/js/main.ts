@@ -75,3 +75,4 @@ interface Teacher {
   // Testing the methods of StudentClass
   console.log(student1.displayName()); // Outputs: Itadory
   console.log(student1.workOnHomework()); // Outputs: Currently working
+  
